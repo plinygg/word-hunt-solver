@@ -1,9 +1,9 @@
-w = open("words.txt", "r")
+w = open("words_alpha.txt", "r")
 
 arr = []
-for num in range(279496):
+for num in range(370105):
     arr.append(w.readline()[:-2])
-
+print(arr)
 test = 0
 for n in arr:
     test = max(test, len(n))
@@ -46,7 +46,7 @@ def generate(r, c, len, cur):
     # generate(r-1, c+1, len, cur)
     # generate(r+1, c-1, len, cur)
 
-generate(0, 0, 0, [])
+# generate(0, 0, 0, [])
 
 for temp in result:
     print(temp)
@@ -56,4 +56,4 @@ for temp in result:
     if q in arr and len(q) > 2:
         res.append(q)
         
-print(res)
+# print(res)
